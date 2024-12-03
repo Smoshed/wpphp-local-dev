@@ -21,6 +21,13 @@
 
       <div class="generic-content"><?php the_content(); ?></div>
 
+      <?php 
+
+        $relatedPrograms = get_fields('related_programs');
+        print_r($relatedPrograms);
+
+      ?>
+
     </div>
     
 

@@ -40,3 +40,6 @@ if (!is_admin() AND is_post_type_archive('program') AND is_main_query()) {
 }
 
 add_action('pre_get_posts', 'university_adjust_queries');
+
+//classic editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
