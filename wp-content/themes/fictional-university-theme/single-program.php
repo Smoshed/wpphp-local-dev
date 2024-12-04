@@ -39,7 +39,7 @@
             array(
                 'key' => 'related_program',
                 'compare' => 'LIKE',
-                'value' => get_the_ID()
+                'value' => '""' . get_the_ID() . '""'
             )
           )
         ));
