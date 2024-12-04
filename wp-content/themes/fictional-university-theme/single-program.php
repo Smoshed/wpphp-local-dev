@@ -20,8 +20,8 @@
       </div>
 
       <div class="generic-content"><?php the_content(); ?></div>
-
-      <?php  
+      
+      <?php
         $today = date('Ymd');
         $homepageEvents = new WP_Query(array(
           'posts_per_page' => 2,
@@ -39,19 +39,21 @@
             array(
                 'key' => 'related_program',
                 'compare' => 'LIKE',
-                'value' => '""' . get_the_ID() . '""'
+                'value' => '"' . get_the_ID() . '"'
             )
           )
         ));
       
+        echo '<hr class="section-break">';
+        echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Events</h2>';
 
         while($homepageEvents->have_posts()) {
           $homepageEvents->the_post(); ?>
-                  <div class="event-summary">
-          <a class="event-summary__date t-center" href="#">
-            <span class="event-summary__month"><?php 
-            $eventDate = new DateTime(get_field('event_date'));
-            echo $eventDate->format('M')
+          <div class="event-summary">
+            <a class="event-summary__date t-center" href="#">
+              <span class="event-summary__month"><?php 
+                $eventDate = new DateTime(get_field('event_date'));
+                echo $eventDate->format('M')
             ?></span>
             <span class="event-summary__day"><?php echo $eventDate->format('d') ?></span>  
           </a>
