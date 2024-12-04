@@ -1,8 +1,4 @@
-Video: https://www.udemy.com/course/become-a-wordpress-developer-php-javascript/learn/lecture/7466254#overview
-Tijd: 17:05
-
-single-program.php
-lijn:42
+Video: https://www.udemy.com/course/become-a-wordpress-developer-php-javascript/learn/lecture/7484308#overview
 
 
 
