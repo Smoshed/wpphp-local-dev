@@ -36,20 +36,18 @@ function university_post_types() {
     ));
 
         // Professor Post Type
-        register_post_type('program', array(
+        register_post_type('Professor', array(
           'show_in_rest' => true,
           'supports' => array('title', 'editor'),
-          'rewrite' => array('slug' => 'programs'),
-          'has_archive' => true,
           'public' =>  true,
           'labels' => array(
-            'name' => 'Programs',
-            'add_new_item' => 'Add New Program',
-            'edit_item' => 'Edit Program',
-            'all_items' => 'All Programs',
-            'singular_name' => 'Program'
+            'name' => 'Professors',
+            'add_new_item' => 'Add New Professor',
+            'edit_item' => 'Edit Professor',
+            'all_items' => 'All Professors',
+            'singular_name' => 'Professor'
           ),
-          'menu_icon' => 'dashicons-awards'
+          'menu_icon' => 'dashicons-welcome-learn-more'
         ));
 
   }
